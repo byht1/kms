@@ -1,0 +1,37 @@
+.box-header {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-photo {
+  width: 100px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 50px;
+}
+
+.nav-list__link,
+.list-contact__link {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+
+  color: #212121;
+
+  &:hover,
+  &:focus {
+    color: #2196f3;
+  }
+}
+
+.list-contact {
+  display: flex;
+  gap: 50px;
+}

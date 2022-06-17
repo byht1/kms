@@ -1,0 +1,29 @@
+.hero-list__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+
+.hero-list__text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+
+  color: #fff;
+}
+
+.swiper .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.swiper {
+  max-width: 1600px;
+}

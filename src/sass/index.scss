@@ -1,2 +1,14 @@
-@import './common';
-@import './example';
+// Міксин
+
+@import './vendors/mixin';
+
+// Скидання стилів
+@import './utils/value';
+@import './utils/reset';
+
+// Матеріали проекту
+@import './component/header';
+@import './component/hero';
+@import './component/coment';
+@import './component/partner';
+@import './component/footer';
