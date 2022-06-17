@@ -1,21 +1,21 @@
 {
-  "name": "parcel-project-template",
+  "name": "kms",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://byht1.github.io/parcel-project-template",
+  "homepage": "https://byht1.github.io/kms",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /parcel-project-template/"
+    "build": "parcel build src/*.html --public-url /kms/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/byht1/parcel-project-template.git"
+    "url": "git+https://github.com/byht1/kms.git"
   },
   "keywords": [],
   "author": "Vitaliy Dykhal <vitalikbyht1@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/byht1/parcel-project-template/issues"
+    "url": "https://github.com/byht1/kms/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
