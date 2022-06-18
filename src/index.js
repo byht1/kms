@@ -1,7 +1,7 @@
 // import Swiper from 'swiper';
 // import 'swiper/css';
 
-// const swiper = new Swiper('.swiper', {
+// new Swiper('.swiper', {
 //   navigation: {
 //     nextEl: '.swiper-button-next',
 //     prevEl: '.swiper-button-prev',
@@ -19,7 +19,9 @@
 //   },
 // });
 
-new Swiper('.swiper', {
+import Swiper from 'swiper/swiper-bundle';
+
+const swiper = new Swiper('.swiper', {
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -34,5 +36,7 @@ new Swiper('.swiper', {
 
   autoplay: {
     delay: 5000,
+    stopOnLastSlide: true,
+    disableOnInteraction: false,
   },
 });
