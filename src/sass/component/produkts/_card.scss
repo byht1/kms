@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.container-card .card {
+.card {
   position: relative;
   width: 600px;
   height: 350px;
@@ -20,7 +20,7 @@
   background: linear-gradient(45deg, #1a2f3f, #7094ce);
 }
 
-.container-card .card img {
+.prodults-photo {
   position: absolute;
   bottom: 0;
   left: 50%;
@@ -30,12 +30,12 @@
   transition: 500ms;
 }
 
-.container-card .card:hover img {
+.card:hover .prodults-photo {
   left: 73%;
   height: 350px;
 }
 
-.container-card .card .content {
+.produkts-list__content {
   position: relative;
   width: 50%;
   left: 20%;
@@ -45,24 +45,24 @@
   transition: 500ms;
 }
 
-.container-card .card:hover .content {
+.card:hover .produkts-list__content {
   opacity: 1;
   visibility: visible;
   left: 0;
 }
 
-.container-card .card .content h2 {
+.produkts-list__content-header {
   color: #fff;
   text-transform: uppercase;
   font-size: 1.5em;
   line-height: 1em;
 }
 
-.container-card .card .content p {
+.produkts-list__content-text {
   color: #fff;
 }
 
-.container-card .card .content a {
+.produkts-list__content-link {
   position: relative;
   color: #111;
   background: #fff;
@@ -73,26 +73,26 @@
   font-weight: 700;
 }
 
-.grid {
+.produkts-list {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
 @media screen and (min-width: 1081px) {
-  .grid {
+  .produkts-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (max-width: 1080px) {
-  .container-card .card {
+  .card {
     width: auto;
     max-width: 600px;
     align-items: flex-start;
   }
 
-  .container-card .card:hover {
+  .card:hover {
     height: 600px;
   }
   .container-card .card:hover img {
@@ -100,7 +100,7 @@
     height: 350px;
   }
 
-  .container-card .card .content {
+  .produkts-list__content {
     width: 100%;
     left: 0;
     padding: 40px;
@@ -112,17 +112,17 @@
     flex-direction: column;
   }
 
-  .container-card .card {
+  .card {
     max-width: 40px 20px;
   }
 }
 
 @media screen and (max-width: 420px) {
-  .container-card .card .content {
+  .produkts-list__content {
     padding: 30px;
   }
 
-  .container-card .card:hover img {
+  .card:hover .prodults-photo {
     height: 300px;
   }
 }
