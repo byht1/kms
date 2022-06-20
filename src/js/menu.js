@@ -14,7 +14,4 @@ document.querySelector('.toggle').onclick = function () {
   this.classList.toggle('active');
   navigation.classList.toggle('active');
 };
-
-setTimeout(() => {
-  window.scrollTo(0, 1);
-}, 2000);
+window.scrollTo(0, 1);
