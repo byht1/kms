@@ -1,0 +1,2 @@
+!function(){var o={openModalBtn:document.querySelector("[data-open-modal-two]"),closeModalBtn:document.querySelector("[data-close-modal-two]"),backdrop:document.querySelector("[data-backdrop-two]")};function e(){document.body.classList.toggle("modal-open"),o.backdrop.classList.toggle("is-hidden")}o.openModalBtn.addEventListener("click",e),o.closeModalBtn.addEventListener("click",e),o.backdrop.addEventListener("click",(function(){console.log("Это клик в бекдроп")}))}();
+//# sourceMappingURL=gaz.8d336cb1.js.map
