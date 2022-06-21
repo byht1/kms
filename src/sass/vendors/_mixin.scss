@@ -2,7 +2,7 @@
   font-family: $font-family;
   font-style: normal;
   font-weight: $a;
-  font-size: $b + px;
+  font-size: $b;
   line-height: calc($c / $b);
   //   Приклад застосування:
   // @include text('DM Sans', 700, 16, 21);
@@ -18,8 +18,7 @@
 }
 
 @mixin transition() {
-  transition: transform 250ms var(--cubic), color 250ms var(--cubic),
-    background-color 250ms var(--cubic);
+  transition: color 250ms var(--cubic), background-color 250ms var(--cubic);
 }
 
 @mixin mobile {

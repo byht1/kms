@@ -78,12 +78,21 @@
 .produkts-list__content-link {
   position: relative;
   color: #111;
-  background: #fff;
+  background: #2196f3;
+  color: #fff;
   display: inline-block;
   padding: 10px 20px;
   margin-top: 10px;
   text-decoration: none;
   font-weight: 700;
+
+  @include transition();
+
+  &:hover,
+  &:focus {
+    color: #2196f3;
+    background-color: #fff;
+  }
 }
 
 .produkts-list {
