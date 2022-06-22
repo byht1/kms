@@ -77,10 +77,15 @@
 }
 
 .nav-list__link {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
   color: #fff;
   display: inline-block;
   padding: 10px 15px;
-  font-size: 0.9em;
   text-transform: uppercase;
   text-align: center;
 
