@@ -1,0 +1,45 @@
+.contacrs-box {
+  padding: 50px 0;
+}
+
+.contacts__header {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+.contacts-wraper-box {
+  margin-top: 50px;
+  padding: 30px;
+  width: 40%;
+  height: auto;
+  background-color: #f9fafb;
+}
+
+.adress:not(:first-child) {
+  margin-top: 20px;
+}
+
+.adress-text {
+  margin-bottom: 10px;
+}
+
+.adress-link {
+  color: #536779;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.adress-icon {
+  margin-right: 15px;
+}
+
+.contacts-wraper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
