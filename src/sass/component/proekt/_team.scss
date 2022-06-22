@@ -1,0 +1,124 @@
+body {
+  min-height: 100vh;
+}
+
+.team-box {
+  padding: 20px 0;
+}
+
+.card-box {
+  margin-top: 50px;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  row-gap: 80px;
+}
+
+.card {
+  justify-self: center;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-color: #fff;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  box-shadow: 10px 20px 40px rgba($color: #000000, $alpha: 0.25);
+  transition: 1000ms;
+
+  &:hover {
+    transform: translateX(50%);
+  }
+}
+
+.imgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  background-color: #000;
+  transition: 1000ms;
+}
+
+.card:hover .imgBox {
+  transform: rotateY(-180deg);
+}
+
+.card .imgBox__photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.imgBox__photo-two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(180deg);
+  box-shadow: 10px 20px 40px rgba($color: #000000, $alpha: 0.25);
+}
+
+.detalis {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content__header {
+  text-align: center;
+  font-weight: 700;
+  left: 1em;
+
+  & span {
+    font-size: 0.8em;
+    color: #2196f3;
+  }
+}
+
+.network {
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+}
+
+.network__link {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin: 5px;
+  font-size: 18px;
+  transition: 200ms;
+
+  &:hover {
+    background-color: #2196f3;
+  }
+}
