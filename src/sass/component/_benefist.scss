@@ -1,0 +1,114 @@
+.benefist__header {
+  margin-bottom: 30px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.benefist-box {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.content {
+  &__fon {
+    display: flex;
+    justify-content: center;
+    padding: 25px 0;
+    background-color: #f5f4fa;
+  }
+  &__paragraph {
+    margin-top: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $colorText;
+  }
+
+  &__text {
+    margin-top: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $colorMain;
+  }
+  &__icon {
+    fill: #212121;
+  }
+}
+
+// @media screen and (min-width: 480px) {
+//   .benefist-box {
+//     display: flex;
+//     justify-content: center;
+//   }
+//   .content__element {
+//     width: 450px;
+//   }
+// }
+
+@media screen and (max-width: 767px) {
+  .content {
+    &__element:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    &__paragraph {
+      text-align: center;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .content {
+    flex-wrap: wrap;
+    &__element {
+      width: 354px;
+
+      &:nth-child(2n) {
+        margin-left: 30px;
+      }
+
+      &:not(:nth-child(-n + 2)) {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .benefist-box {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .content {
+    &__element {
+      width: 100%;
+      margin-right: 30px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__fon {
+      width: 270px;
+    }
+  }
+}
