@@ -17,4 +17,4 @@ document.querySelector('.toggle').onclick = function () {
 
 setTimeout(() => {
   window.scrollTo(0, 1);
-}, 2000);
+}, 1000);

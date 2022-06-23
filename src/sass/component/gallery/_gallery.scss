@@ -45,3 +45,26 @@
 .gallery__link:hover {
   cursor: zoom-in;
 }
+
+.gallery__item-box {
+  position: relative;
+}
+
+.gallery__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: rgba(47, 48, 58, 0.7);
+}

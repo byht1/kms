@@ -10,7 +10,7 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
@@ -20,8 +20,16 @@
   margin-top: 10px;
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 1.19;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
+
+  color: #757575;
+
+  text-align: justify;
+
+  &:last-child {
+    margin-top: 20px;
+  }
 }
