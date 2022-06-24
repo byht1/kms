@@ -1,0 +1,41 @@
+.servis {
+  padding-top: 80px;
+
+  .container {
+    padding: 50px 0;
+  }
+}
+
+.servis__header {
+  text-align: center;
+  letter-spacing: 0.03em;
+  font-family: Roboto;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.17;
+}
+
+.srcvis-box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-basis: calc(100% / 2 - 50px);
+  gap: 50px;
+}
+
+.servis-text {
+  letter-spacing: 0.03em;
+  color: #757575;
+  text-align: justify;
+  margin-top: 10px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+}
+
+.servis-photo {
+  width: calc(100% / 2 - 50px);
+}
