@@ -20,6 +20,22 @@ const dataForm = {
   },
   appointment: '',
   evaporator: false,
+  min: '',
+  max: '',
+  volumeCylinder: '',
+  volumeGasifier: '',
+  pressure: '',
+  additionalEquipment: '',
+  location: '',
+  gas: '',
+  number: '',
+  movable: '',
+  designing: '',
+  construction: '',
+  assembling: '',
+  oebugging: '',
+  to: '',
+  others: '',
 };
 
 refs.form.addEventListener('submit', onSubmit);
