@@ -1,0 +1,13 @@
+// Міксин
+
+@import './vendors/mixin';
+
+// Скидання стилів
+@import './utils/value';
+@import './utils/reset';
+
+// Матеріали проекту
+@import './component/header';
+@import './component/form';
+
+@import './component/footer';
