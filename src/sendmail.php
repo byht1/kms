@@ -10,6 +10,12 @@ require 'vendor/autoload.php';
 
 $mail = new PHPMailer(true);
 $mail->CharSet = 'UTF-8';
+$mail->Host = 'smtp.gmail.com';  
+$mail->SMTPAuth = true;  
+$mail->Username = '';
+$mail->Password = ''; 
+$mail->SMTPSecure = 'ssl';  
+$mail->Port = 465;  
 $mail->setLanguage('uk', 'phpmailer/language');
 $mail->IsHTML(true);
 
