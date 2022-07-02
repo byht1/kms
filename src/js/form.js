@@ -66,20 +66,20 @@ async function onSubmit() {
   //   }
   // }
 
-  let formData = new FormData(refs.form);
-  console.log('🚀 ~ formData', formData);
+  // let formData = new FormData(refs.form);
+  // console.log('🚀 ~ formData', formData);
 
-  let response = await fetch('sendmail.php', {
-    method: 'POST',
-    body: formData,
-  });
+  // let response = await fetch('sendmail.php', {
+  //   method: 'POST',
+  //   body: formData,
+  // });
 
-  if (response.ok) {
-    let result = await response.json();
-    alert('by');
-  } else {
-    alert('error');
-  }
+  // if (response.ok) {
+  //   let result = await response.json();
+  //   alert('by');
+  // } else {
+  //   alert('error');
+  // }
 }
 
 function next() {
