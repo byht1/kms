@@ -19,7 +19,8 @@
       <section class="form-section">
         <div class="container">
           <div class="box">
-            <form action="https://formspree.io/f/xayvgwpy" method="POST">
+            <!-- <form action="https://formspree.io/f/xayvgwpy" method="POST"> -->
+            <form autocomplete="on" id="form">
               <h1 class="form-header">
                 Лист опитування
                 <span class="form-header--decoration"
@@ -66,10 +67,10 @@
                 <label class="form-label">
                   <span class="form-label__text">Телефон</span>
                   <input
-                    class="form-label__input"
+                    class="form-label__input form-label__input-tel"
                     type="tel"
                     name="phone"
-                    placeholder="tov.kms.2020@gmail.com"
+                    placeholder="+38 (050) 000-00-00"
                   />
                 </label>
                 <label class="form-label">
@@ -78,7 +79,8 @@
                     class="form-label__input"
                     type="email"
                     name="email"
-                    placeholder="+38 (050) 000-00-00"
+                    placeholder="tov.kms.2020@gmail.com"
+                    pattern="^([a-z0-9]+(?:[._-][a-z0-9]+)*)@([a-z0-9]+(?:[.-][a-z0-9]+)*\.[a-z]{2,})$"
                   />
                 </label>
                 <button class="button next" type="button">Далі</button>
@@ -101,7 +103,11 @@
                   </label>
                   <label class="form-next-label">
                     <span class="form-label__text">Ішне</span>
-                    <input type="text" name="otherEquipment" />
+                    <input
+                      type="text"
+                      name="otherEquipment"
+                      pattern="^[a-zA-Z0-9 ]*$"
+                    />
                   </label>
                 </div>
 
@@ -408,6 +414,10 @@
     <include src="./partials/page1/footer.html"></include>
 
     <script src="./js/menu.js" type="module"></script>
+    <!-- маска для телефона -->
+    <!-- <script src="https://unpkg.com/imask"></script> -->
+    <script src="./js/inputmask.min.js"></script>
+    <script src="./js/maska-tel.js"></script>
     <script src="./js/form.js" type="module"></script>
   </body>
 </html>

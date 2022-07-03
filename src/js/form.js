@@ -1,3 +1,5 @@
+import * as yup from 'yup';
+
 const refs = {
   form: document.querySelector('#form'),
   formOne: document.querySelector('.form'),
@@ -42,9 +44,18 @@ refs.form.addEventListener('submit', onSubmit);
 refs.form.addEventListener('input', onChange);
 refs.next.addEventListener('click', next);
 
+// let schema = yup.object().shape({
+//   name: yup.string().required(),
+//   age: yup.number().required().positive().integer(),
+//   email: yup.string().email(),
+//   website: yup.string().url(),
+//   createdOn: yup.date().default(function () {
+//     return new Date();
+//   }),
+// });
+
 function onChange() {
   const eve = event.target;
-  console.log('🚀 ~ eve', eve.checked);
 
   if (eve.nodeName === 'INPUT' && eve.type === 'checkbox') {
     dataForm.equipment[eve.name] = eve.checked;
@@ -59,27 +70,19 @@ function onChange() {
 
 async function onSubmit() {
   event.preventDefault();
-  // for (var i = 0; i < refs.evaporator.length; i++) {
-  //   if (refs.evaporator.checked) {
-  //     dataForm.evaporator = true;
-  //     return;
-  //   }
+  const {
+    equipment: { gasifier, capacity, cylinder, otherEquipment },
+  } = dataForm;
+
+  // перевірка поля (Виберіть тип обладання)
+  // if (!gasifier && !capacity && !cylinder && otherEquipment === '') {
+  //   alert('erroe');
+  //   return;
   // }
-
-  // let formData = new FormData(refs.form);
-  // console.log('🚀 ~ formData', formData);
-
-  // let response = await fetch('sendmail.php', {
-  //   method: 'POST',
-  //   body: formData,
-  // });
-
-  // if (response.ok) {
-  //   let result = await response.json();
-  //   alert('by');
-  // } else {
-  //   alert('error');
-  // }
+  console.log('все погано');
+  let schema = yup.object().shape({
+    company: yup.string().required(),
+  });
 }
 
 function next() {
