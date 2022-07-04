@@ -20,60 +20,65 @@
         <div class="container">
           <div class="box">
             <!-- <form action="https://formspree.io/f/xayvgwpy" method="POST"> -->
-            <form autocomplete="on" id="form">
+            <div id="form">
               <h1 class="form-header">
                 Лист опитування
                 <span class="form-header--decoration"
                   >для замовлення кріогенного обладання</span
                 >
               </h1>
-              <div class="form">
-                <label class="form-label">
+              <form class="form" autocomplete="on">
+                <label class="form-label" for="company">
                   <span class="form-label__text">Огранізація</span>
                   <input
                     class="form-label__input"
                     type="text"
                     name="company"
                     placeholder='ТОВ "КРІО-МЕВ-СЕРВІС"'
+                    id="company"
                   />
                 </label>
-                <label class="form-label">
+                <label class="form-label" for="name">
                   <span class="form-label__text">Ваше ім'я (ПІБ)</span>
                   <input
                     class="form-label__input"
                     type="text"
                     name="name"
                     placeholder="Прізвище Ім'я Побатькові"
+                    id="name"
                   />
                 </label>
-                <label class="form-label">
+                <label class="form-label" for="position">
                   <span class="form-label__text">Посада</span>
                   <input
                     class="form-label__input"
                     type="text"
                     name="position"
                     placeholder="Головний інженер"
+                    id="position"
                   />
                 </label>
-                <label class="form-label">
+                <label class="form-label" for="address">
                   <span class="form-label__text">Адреса</span>
                   <input
                     class="form-label__input"
                     type="text"
                     name="address"
                     placeholder="м.Бояярка, вул.Незадежногсті, 63"
+                    id="address"
                   />
                 </label>
-                <label class="form-label">
+                <label class="form-label" for="phone">
                   <span class="form-label__text">Телефон</span>
                   <input
                     class="form-label__input form-label__input-tel"
                     type="tel"
                     name="phone"
                     placeholder="+38 (050) 000-00-00"
+                    id="phone"
                   />
                 </label>
-                <label class="form-label">
+                <label class="form-label" for="email">
                   <span class="form-label__text">Електрона пошта</span>
                   <input
                     class="form-label__input"
@@ -81,12 +86,13 @@
                     name="email"
                     placeholder="tov.kms.2020@gmail.com"
                     pattern="^([a-z0-9]+(?:[._-][a-z0-9]+)*)@([a-z0-9]+(?:[.-][a-z0-9]+)*\.[a-z]{2,})$"
+                    id="email"
                   />
                 </label>
-                <button class="button next" type="button">Далі</button>
-              </div>
+                <button type="submit" class="button button-next">Далі</button>
+              </form>
 
-              <div class="form-next">
+              <form class="formTwo visually-hidden" autocomplete="on">
                 <div class="form__equipment">
                   <h2>Виберіть тип обладання</h2>
                   <label class="form-next-label">
@@ -110,7 +116,6 @@
                     />
                   </label>
                 </div>
-
                 <label class="form-label">
                   <span class="form-label__text"
                     >Для якого призначення має бути обладнання</span
@@ -291,6 +296,21 @@
                   />
                 </label>
 
+                <ul class="button-list">
+                  <li>
+                    <button type="button" class="button button-back">
+                      Назад
+                    </button>
+                  </li>
+                  <li>
+                    <button type="submit" class="button button-next">
+                      Далі
+                    </button>
+                  </li>
+                </ul>
+              </form>
+
+              <form class="formThree visually-hidden" autocomplete="on">
                 <div class="form__equipment">
                   <h2>Виконання обладання</h2>
                   <div class="form__vessel">
@@ -402,10 +422,21 @@
                     placeholder="Ведіть сюда любий текст"
                   ></textarea>
                 </label>
-              </div>
 
-              <button class="button" type="submit">Відправити</button>
-            </form>
+                <ul class="button-list">
+                  <li>
+                    <button type="button" class="button button-backTwo">
+                      Назад
+                    </button>
+                  </li>
+                  <li>
+                    <button class="button button-submit" type="submit">
+                      Відправити
+                    </button>
+                  </li>
+                </ul>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -419,5 +450,6 @@
     <script src="./js/inputmask.min.js"></script>
     <script src="./js/maska-tel.js"></script>
     <script src="./js/form.js" type="module"></script>
+    <!-- <script src="./js/valid.js" type="module"></script> -->
   </body>
 </html>

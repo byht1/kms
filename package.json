@@ -18,6 +18,7 @@
     "url": "https://github.com/byht1/kms/issues"
   },
   "dependencies": {
+    "just-validate": "^3.8.1",
     "modern-normalize": "^1.1.0",
     "simplelightbox": "^2.10.3",
     "swiper": "^8.2.4"

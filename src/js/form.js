@@ -1,11 +1,13 @@
-import * as yup from 'yup';
-
 const refs = {
   form: document.querySelector('#form'),
   formOne: document.querySelector('.form'),
-  next: document.querySelector('.next'),
-  evaporator: document.getElementsByName('evaporator'),
+  formTwo: document.querySelector('.formTwo'),
+  formThree: document.querySelector('.formThree'),
+  btnBack: document.querySelector('.button-back'),
+  btnBackTwo: document.querySelector('.button-backTwo'),
 };
+
+let x = 0;
 
 const dataForm = {
   company: '',
@@ -40,19 +42,21 @@ const dataForm = {
   others: '',
 };
 
-refs.form.addEventListener('submit', onSubmit);
 refs.form.addEventListener('input', onChange);
-refs.next.addEventListener('click', next);
 
-// let schema = yup.object().shape({
-//   name: yup.string().required(),
-//   age: yup.number().required().positive().integer(),
-//   email: yup.string().email(),
-//   website: yup.string().url(),
-//   createdOn: yup.date().default(function () {
-//     return new Date();
-//   }),
-// });
+refs.formOne.addEventListener('submit', onSubmitOne);
+refs.formTwo.addEventListener('submit', onSubmitTwo);
+refs.formThree.addEventListener('submit', onSubmitThree);
+refs.btnBack.addEventListener('click', () => {
+  refs.formOne.classList.remove('visually-hidden');
+  refs.formTwo.classList.add('visually-hidden');
+  window.scrollTo(0, 0);
+});
+refs.btnBackTwo.addEventListener('click', () => {
+  refs.formTwo.classList.remove('visually-hidden');
+  refs.formThree.classList.add('visually-hidden');
+  window.scrollTo(0, 0);
+});
 
 function onChange() {
   const eve = event.target;
@@ -68,23 +72,34 @@ function onChange() {
   dataForm[`${eve.name}`] = eve.value;
 }
 
-async function onSubmit() {
+function onSubmitOne() {
   event.preventDefault();
-  const {
-    equipment: { gasifier, capacity, cylinder, otherEquipment },
-  } = dataForm;
+  refs.formOne.classList.add('visually-hidden');
+  refs.formTwo.classList.remove('visually-hidden');
 
-  // перевірка поля (Виберіть тип обладання)
-  // if (!gasifier && !capacity && !cylinder && otherEquipment === '') {
-  //   alert('erroe');
-  //   return;
-  // }
-  console.log('все погано');
-  let schema = yup.object().shape({
-    company: yup.string().required(),
-  });
+  window.scrollTo(0, 0);
 }
 
-function next() {
-  console.log(dataForm);
+function onSubmitTwo() {
+  event.preventDefault();
+  refs.formTwo.classList.add('visually-hidden');
+  refs.formThree.classList.remove('visually-hidden');
+  // window.scrollTo(0, 0);
+  const {
+    appointment,
+    equipment: { gasifier, capacity, cylinder, otherEquipment },
+  } = dataForm;
+  console.log('🚀 ~ appointment', appointment);
+}
+
+function onSubmitThree() {
+  event.preventDefault();
+  refs.formTwo.classList.add('visually-hidden');
+  refs.formThree.classList.remove('visually-hidden');
+  window.scrollTo(0, 0);
+  // const {
+  //   equipment: { gasifier, capacity, cylinder, otherEquipment },
+  // } = dataForm;
+
+  // console.log('все погано');
 }
