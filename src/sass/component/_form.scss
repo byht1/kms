@@ -1,5 +1,5 @@
 body {
-  background-color: #536a87;
+  // background-color: #536a87;
   min-height: 100vh;
 }
 
@@ -28,7 +28,7 @@ body {
 .formThree {
   display: block;
 
-  div {
+  .form__equipment {
     margin-top: 30px;
   }
 }
@@ -37,11 +37,10 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   font-family: Roboto;
-  font-size: 36px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  line-height: 42px;
-  color: white;
+  line-height: 1.17;
 }
 
 .form-label {
@@ -57,12 +56,14 @@ body {
 }
 
 .form-label__text {
-  font-family: 'Roboto';
+  letter-spacing: 0.03em;
+  color: #757575;
+  text-align: justify;
+  font-family: Roboto;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  font-size: 1em;
-  letter-spacing: 0.01em;
-  color: #fff;
+  line-height: 1.71;
 }
 
 .form-label__input {
@@ -139,7 +140,7 @@ body {
 
 .form__vessel-type {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 10px;
 }
 
@@ -149,5 +150,64 @@ body {
   gap: 20px;
 }
 
-.button-next {
+.form-label--decoration {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.form-modal-hover {
+  padding: 80px 15px 0 15px;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(47, 48, 58, 0.8405112044817927) 73%,
+    rgba(47, 48, 58, 1) 100%
+  );
+
+  transform: translateX(300px);
+  opacity: 0;
+
+  transition: transform 400ms linear, opacity 400ms linear;
+}
+
+.form__equipment .is-hover {
+  display: block;
+  margin: 0;
+}
+
+.form__equipment:hover .form-modal-hover {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.form-modal-hover__text {
+  letter-spacing: 0.03em;
+  text-align: justify;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.71;
+}
+
+.form__vessel-type__photo {
+  width: 100px;
+}
+.form__vessel-type__photo.one {
+  width: auto;
+  max-height: 205px;
+}
+
+.form__vessel-type div {
+  display: grid;
+  gap: 10px;
 }

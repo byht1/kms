@@ -84,7 +84,7 @@ function onSubmitTwo() {
   event.preventDefault();
   refs.formTwo.classList.add('visually-hidden');
   refs.formThree.classList.remove('visually-hidden');
-  // window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
   const {
     appointment,
     equipment: { gasifier, capacity, cylinder, otherEquipment },

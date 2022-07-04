@@ -29,27 +29,27 @@
               </h1>
               <form class="form" autocomplete="on">
                 <label class="form-label" for="company">
-                  <span class="form-label__text">Огранізація</span>
+                  <span class="form-label__text">1. Огранізація</span>
                   <input
                     class="form-label__input"
                     type="text"
                     name="company"
-                    placeholder='ТОВ "КРІО-МЕВ-СЕРВІС"'
+                    placeholder='ТОВ "КРІО-МЕД-СЕРВІС"'
                     id="company"
                   />
                 </label>
                 <label class="form-label" for="name">
-                  <span class="form-label__text">Ваше ім'я (ПІБ)</span>
+                  <span class="form-label__text">2. Ваше ім'я</span>
                   <input
                     class="form-label__input"
                     type="text"
                     name="name"
-                    placeholder="Прізвище Ім'я Побатькові"
+                    placeholder="Прізвище Ім'я"
                     id="name"
                   />
                 </label>
                 <label class="form-label" for="position">
-                  <span class="form-label__text">Посада</span>
+                  <span class="form-label__text">3. Посада</span>
                   <input
                     class="form-label__input"
                     type="text"
@@ -59,17 +59,17 @@
                   />
                 </label>
                 <label class="form-label" for="address">
-                  <span class="form-label__text">Адреса</span>
+                  <span class="form-label__text">4. Адреса</span>
                   <input
                     class="form-label__input"
                     type="text"
                     name="address"
-                    placeholder="м.Бояярка, вул.Незадежногсті, 63"
+                    placeholder="м.Боярка, вул.Незадежногсті, 63"
                     id="address"
                   />
                 </label>
                 <label class="form-label" for="phone">
-                  <span class="form-label__text">Телефон</span>
+                  <span class="form-label__text">5. Телефон</span>
                   <input
                     class="form-label__input form-label__input-tel"
                     type="tel"
@@ -79,7 +79,7 @@
                   />
                 </label>
                 <label class="form-label" for="email">
-                  <span class="form-label__text">Електрона пошта</span>
+                  <span class="form-label__text">6. Електрона пошта</span>
                   <input
                     class="form-label__input"
                     type="email"
@@ -94,7 +94,7 @@
 
               <form class="formTwo visually-hidden" autocomplete="on">
                 <div class="form__equipment">
-                  <h2>Виберіть тип обладання</h2>
+                  <h2>7. Виберіть тип обладнання</h2>
                   <label class="form-next-label">
                     <input type="checkbox" name="cylinder" />
                     <span class="form-label__text">Кріоциліндр</span>
@@ -116,10 +116,9 @@
                     />
                   </label>
                 </div>
-                <label class="form-label">
-                  <span class="form-label__text"
-                    >Для якого призначення має бути обладнання</span
-                  >
+
+                <label class="form-label form-label--decoration">
+                  <h2>8. Для якого призначення має бути обладнання</h2>
                   <input
                     class="form-label__input"
                     type="text"
@@ -129,7 +128,24 @@
                 </label>
 
                 <div class="form__equipment">
-                  <h2>Наявність випарника</h2>
+                  <div class="is-hover">
+                    <h2>9. Наявність випарника атмосферного</h2>
+                  </div>
+                  <div class="form-modal-hover">
+                    <img
+                      class="form-modal-hover__photo"
+                      src="./images/isparitel.png"
+                      alt="випарник атмосферний"
+                      loading="lazy"
+                    />
+                    <p class="form-modal-hover__text">
+                      Атмосферні випарники призначені для газифікації рідких
+                      кріопродуктів (скраплених природного газу, азоту, аргону,
+                      кисню, двоокису вуглецю) за допомогою теплообміну.
+                      Випарники є найбільш економічним обладнанням для
+                      випаровування або регазифікації зріджених газів.
+                    </p>
+                  </div>
                   <label class="form-next-label">
                     <input type="radio" name="evaporator" />
                     <span class="form-label__text">Так</span>
@@ -141,7 +157,7 @@
                 </div>
 
                 <div class="form__equipment">
-                  <h2>Споживання кисню м<sup>3</sup>/год</h2>
+                  <h2>10. Споживання кисню м<sup>3</sup>/год</h2>
                   <label class="form-label">
                     <span class="form-label__text">min</span>
                     <input
@@ -163,59 +179,76 @@
                 </div>
 
                 <div class="form__equipment">
-                  <h2>Об'єм посудини</h2>
+                  <h2>11. Об'єм посудини</h2>
                   <div class="form__vessel">
                     <div class="form__vessel-type">
-                      <h3>Кріоцилінд, л</h3>
-                      <label class="form-next-label">
-                        <input type="radio" name="volumeCylinder" />
-                        <span class="form-label__text">175 л</span>
-                      </label>
-                      <label class="form-next-label">
-                        <input type="radio" name="volumeCylinder" />
-                        <span class="form-label__text">196 л</span>
-                      </label>
-                      <label class="form-next-label">
-                        <input type="radio" name="volumeCylinder" />
-                        <span class="form-label__text">210 л</span>
-                      </label>
-                      <label class="form-next-label">
-                        <input type="radio" name="volumeCylinder" />
-                        <span class="form-label__text">500 л</span>
-                      </label>
+                      <img
+                        class="form__vessel-type__photo one"
+                        src="./images/kriocelinder.png"
+                        alt="Кріоциліндр"
+                        loading="lazy"
+                      />
+                      <div>
+                        <h3>Кріоцилінд, л</h3>
+                        <label class="form-next-label">
+                          <input type="radio" name="volumeCylinder" />
+                          <span class="form-label__text">175 л</span>
+                        </label>
+                        <label class="form-next-label">
+                          <input type="radio" name="volumeCylinder" />
+                          <span class="form-label__text">196 л</span>
+                        </label>
+                        <label class="form-next-label">
+                          <input type="radio" name="volumeCylinder" />
+                          <span class="form-label__text">210 л</span>
+                        </label>
+                        <label class="form-next-label">
+                          <input type="radio" name="volumeCylinder" />
+                          <span class="form-label__text">500 л</span>
+                        </label>
+                      </div>
                     </div>
+
                     <div class="form__vessel-type">
-                      <h3>Газифікатор, м<sup>3</sup>/год</h3>
-                      <label class="form-next-label">
-                        <input type="radio" name="volumeGasifier" />
-                        <span class="form-label__text"
-                          >1 м<sup>3</sup>/год</span
-                        >
-                      </label>
-                      <label class="form-next-label">
-                        <input type="radio" name="volumeGasifier" />
-                        <span class="form-label__text"
-                          >3 м<sup>3</sup>/год</span
-                        >
-                      </label>
-                      <label class="form-next-label">
-                        <input type="radio" name="volumeGasifier" />
-                        <span class="form-label__text"
-                          >5 м<sup>3</sup>/год</span
-                        >
-                      </label>
-                      <label class="form-next-label">
-                        <input type="radio" name="volumeGasifier" />
-                        <span class="form-label__text"
-                          >10 м<sup>3</sup>/год</span
-                        >
-                      </label>
+                      <img
+                        class="form__vessel-type__photo"
+                        src="./images/gazyficator.png"
+                        alt="Кріоциліндр"
+                        loading="lazy"
+                      />
+                      <div>
+                        <h3>Газифікатор, м<sup>3</sup>/год</h3>
+                        <label class="form-next-label">
+                          <input type="radio" name="volumeGasifier" />
+                          <span class="form-label__text"
+                            >1 м<sup>3</sup>/год</span
+                          >
+                        </label>
+                        <label class="form-next-label">
+                          <input type="radio" name="volumeGasifier" />
+                          <span class="form-label__text"
+                            >3 м<sup>3</sup>/год</span
+                          >
+                        </label>
+                        <label class="form-next-label">
+                          <input type="radio" name="volumeGasifier" />
+                          <span class="form-label__text"
+                            >5 м<sup>3</sup>/год</span
+                          >
+                        </label>
+                        <label class="form-next-label">
+                          <input type="radio" name="volumeGasifier" />
+                          <span class="form-label__text"
+                            >10 м<sup>3</sup>/год</span
+                          >
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="form__equipment">
-                  <h2>Робочій тиск посудини, МПа</h2>
+                  <h2>12. Робочій тиск посудини, МПа</h2>
                   <label class="form-next-label">
                     <input type="radio" name="pressure" />
                     <span class="form-label__text">1,37 МПа</span>
@@ -238,8 +271,8 @@
                   </label>
                 </div>
 
-                <label class="form-label">
-                  <span class="form-label__text">Додаткове обладання</span>
+                <label class="form-label form-label--decoration">
+                  <h2>13. Додаткове обладання</h2>
                   <input
                     class="form-label__input"
                     type="text"
@@ -248,10 +281,8 @@
                   />
                 </label>
 
-                <label class="form-label">
-                  <span class="form-label__text"
-                    >Місце розташування обладання</span
-                  >
+                <label class="form-label form-label--decoration">
+                  <h2>14. Місце розташування обладання</h2>
                   <input
                     class="form-label__input"
                     type="text"
@@ -261,7 +292,7 @@
                 </label>
 
                 <div class="form__equipment">
-                  <h2>Для якого газу потрібне обладання</h2>
+                  <h2>15. Для якого газу потрібне обладання</h2>
                   <label class="form-next-label">
                     <input type="radio" name="gas" />
                     <span class="form-label__text">Кисень (O<sub>2</sub>)</span>
@@ -286,8 +317,8 @@
                   </label>
                 </div>
 
-                <label class="form-label">
-                  <span class="form-label__text">Кількість, шт.</span>
+                <label class="form-label form-label--decoration">
+                  <h2>16. Кількість, шт.</h2>
                   <input
                     class="form-label__input"
                     type="number"
@@ -312,7 +343,7 @@
 
               <form class="formThree visually-hidden" autocomplete="on">
                 <div class="form__equipment">
-                  <h2>Виконання обладання</h2>
+                  <h2>17. Виконання обладання</h2>
                   <div class="form__vessel">
                     <div class="form__vessel-type">
                       <h3>Пересувне або стаціонарне</h3>
@@ -341,7 +372,7 @@
 
                 <div class="form__equipment">
                   <h2>
-                    Необхібність розробки проектно кошторисної-документації
+                    18. Необхібність розробки проектно кошторисної-документації
                     (ПКД) та проходження експертизи для встановлення обладання
                     та введення в експлуатацію
                   </h2>
@@ -361,7 +392,7 @@
 
                 <div class="form__equipment">
                   <h2>
-                    Чи потрібно виконувати будівельно-монтажні роботи по
+                    19. Чи потрібно виконувати будівельно-монтажні роботи по
                     встановленню обладання?
                   </h2>
                   <label class="form-next-label">
@@ -374,10 +405,8 @@
                   </label>
                 </div>
 
-                <label class="form-label">
-                  <span class="form-label__text"
-                    >Монтаж додаткового обладання</span
-                  >
+                <label class="form-label form-label--decoration">
+                  <h2>20. Монтаж додаткового обладання</h2>
                   <input
                     class="form-label__input"
                     type="text"
@@ -387,7 +416,9 @@
                 </label>
 
                 <div class="form__equipment">
-                  <h2>Чи потрібно провести пуско-налагоджувальні роботи?</h2>
+                  <h2>
+                    21. Чи потрібно провести пуско-налагоджувальні роботи?
+                  </h2>
                   <label class="form-next-label">
                     <input type="radio" name="oebugging" />
                     <span class="form-label__text">Так</span>
@@ -400,7 +431,7 @@
 
                 <div class="form__equipment">
                   <h2>
-                    Чи потрібно провести технічне обслуговування існуючого
+                    22. Чи потрібно провести технічне обслуговування існуючого
                     обладання?
                   </h2>
                   <label class="form-next-label">
@@ -413,8 +444,8 @@
                   </label>
                 </div>
 
-                <label class="form-label">
-                  <span class="form-label__text">Інше вимоги</span>
+                <label class="form-label form-label--decoration">
+                  <h2>23. Інше вимоги</h2>
                   <textarea
                     class="form-label__input"
                     type="text"
