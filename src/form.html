@@ -22,10 +22,8 @@
             <!-- <form action="https://formspree.io/f/xayvgwpy" method="POST"> -->
             <div id="form">
               <h1 class="form-header">
-                Лист опитування
-                <span class="form-header--decoration"
-                  >для замовлення кріогенного обладання</span
-                >
+                Опитувальний лист для визначення орієнтовної ціни кріогенного
+                обладнання
               </h1>
               <form class="form" autocomplete="on">
                 <label class="form-label" for="company">
@@ -94,7 +92,7 @@
 
               <form class="formTwo visually-hidden" autocomplete="on">
                 <div class="form__equipment">
-                  <h2>7. Виберіть тип обладнання</h2>
+                  <h2>7. Виберіть необхідний тип обладнання.</h2>
                   <label class="form-next-label">
                     <input type="checkbox" name="cylinder" />
                     <span class="form-label__text">Кріоциліндр</span>
@@ -118,7 +116,7 @@
                 </div>
 
                 <label class="form-label form-label--decoration">
-                  <h2>8. Для якого призначення має бути обладнання</h2>
+                  <h2>8. Для якого призначення має бути обладнання.</h2>
                   <input
                     class="form-label__input"
                     type="text"
@@ -128,9 +126,7 @@
                 </label>
 
                 <div class="form__equipment">
-                  <div class="is-hover">
-                    <h2>9. Наявність випарника атмосферного</h2>
-                  </div>
+                  <h2>9. Чи необхідно встановити випарник атмосферний.</h2>
                   <div class="form-modal-hover">
                     <img
                       class="form-modal-hover__photo"
@@ -157,7 +153,10 @@
                 </div>
 
                 <div class="form__equipment">
-                  <h2>10. Споживання кисню м<sup>3</sup>/год</h2>
+                  <h2>
+                    10. Яке сумарне споживання газу (з уразуванням ыснуючого та
+                    перспективного)? м<sup>3</sup>/год.
+                  </h2>
                   <label class="form-label">
                     <span class="form-label__text">min</span>
                     <input
@@ -179,7 +178,7 @@
                 </div>
 
                 <div class="form__equipment">
-                  <h2>11. Об'єм посудини</h2>
+                  <h2>11. Об'єм посудини.</h2>
                   <div class="form__vessel">
                     <div class="form__vessel-type">
                       <img
@@ -248,7 +247,7 @@
                 </div>
 
                 <div class="form__equipment">
-                  <h2>12. Робочій тиск посудини, МПа</h2>
+                  <h2>12. Робочий тиск посудини, МПа.</h2>
                   <label class="form-next-label">
                     <input type="radio" name="pressure" />
                     <span class="form-label__text">1,37 МПа</span>
@@ -272,17 +271,17 @@
                 </div>
 
                 <label class="form-label form-label--decoration">
-                  <h2>13. Додаткове обладання</h2>
+                  <h2>13. Додаткове обладнання.</h2>
                   <input
                     class="form-label__input"
                     type="text"
                     name="additionalEquipment"
-                    placeholder="Рукав для саправки, контейнер ..."
+                    placeholder="Рукав для заправки, контейнер ..."
                   />
                 </label>
 
                 <label class="form-label form-label--decoration">
-                  <h2>14. Місце розташування обладання</h2>
+                  <h2>14. Місце розташування обладнання.</h2>
                   <input
                     class="form-label__input"
                     type="text"
@@ -292,7 +291,7 @@
                 </label>
 
                 <div class="form__equipment">
-                  <h2>15. Для якого газу потрібне обладання</h2>
+                  <h2>15. Для якого газу потрібне обладнання.</h2>
                   <label class="form-next-label">
                     <input type="radio" name="gas" />
                     <span class="form-label__text">Кисень (O<sub>2</sub>)</span>
@@ -343,10 +342,10 @@
 
               <form class="formThree visually-hidden" autocomplete="on">
                 <div class="form__equipment">
-                  <h2>17. Виконання обладання</h2>
+                  <h2>17. Виконання обладання повинно бути:</h2>
                   <div class="form__vessel">
-                    <div class="form__vessel-type">
-                      <h3>Пересувне або стаціонарне</h3>
+                    <div class="form__vessel-type big">
+                      <h3>Пересувне або стаціонарне.</h3>
                       <label class="form-next-label">
                         <input type="radio" name="movable" />
                         <span class="form-label__text">Пересувне</span>
@@ -356,8 +355,8 @@
                         <span class="form-label__text">Стаціонарне</span>
                       </label>
                     </div>
-                    <div class="form__vessel-type">
-                      <h3>Горизонтальне чи вертикальне</h3>
+                    <div class="form__vessel-type big">
+                      <h3>Горизонтальне чи вертикальне.</h3>
                       <label class="form-next-label">
                         <input type="radio" name="positioning" />
                         <span class="form-label__text">Вертикальне</span>
@@ -366,15 +365,19 @@
                         <input type="radio" name="positioning" />
                         <span class="form-label__text">Горизонтальне</span>
                       </label>
+                      <label class="form-next-label">
+                        <input type="radio" name="positioning" />
+                        <span class="form-label__text">Будь-яке</span>
+                      </label>
                     </div>
                   </div>
                 </div>
 
                 <div class="form__equipment">
                   <h2>
-                    18. Необхібність розробки проектно кошторисної-документації
+                    18. Необхібність розробки проектно-кошторисної документації
                     (ПКД) та проходження експертизи для встановлення обладання
-                    та введення в експлуатацію
+                    та введення в експлуатацію.
                   </h2>
                   <label class="form-next-label">
                     <input type="radio" name="designing" />
@@ -393,7 +396,7 @@
                 <div class="form__equipment">
                   <h2>
                     19. Чи потрібно виконувати будівельно-монтажні роботи по
-                    встановленню обладання?
+                    встановленню обладнання?
                   </h2>
                   <label class="form-next-label">
                     <input type="radio" name="construction" />
@@ -406,7 +409,7 @@
                 </div>
 
                 <label class="form-label form-label--decoration">
-                  <h2>20. Монтаж додаткового обладання</h2>
+                  <h2>20. Монтаж додаткового обладнання.</h2>
                   <input
                     class="form-label__input"
                     type="text"
@@ -445,12 +448,12 @@
                 </div>
 
                 <label class="form-label form-label--decoration">
-                  <h2>23. Інше вимоги</h2>
+                  <h2>23. Інші вимоги.</h2>
                   <textarea
                     class="form-label__input"
                     type="text"
                     name="others"
-                    placeholder="Ведіть сюда любий текст"
+                    placeholder="Ваші пропозиції..."
                   ></textarea>
                 </label>
 

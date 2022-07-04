@@ -179,11 +179,6 @@ body {
   transition: transform 400ms linear, opacity 400ms linear;
 }
 
-.form__equipment .is-hover {
-  display: block;
-  margin: 0;
-}
-
 .form__equipment:hover .form-modal-hover {
   transform: translateX(0);
   opacity: 1;
@@ -210,4 +205,14 @@ body {
 .form__vessel-type div {
   display: grid;
   gap: 10px;
+}
+
+.form__vessel .form__vessel-type .big {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.box h2 {
+  width: 800px;
 }
