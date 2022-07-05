@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>KMS</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./sass/form.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,8 +27,8 @@
                 обладнання
               </h1>
               <form class="form" autocomplete="on">
-                <label class="form-label" for="company">
-                  <span class="form-label__text">1. Огранізація</span>
+                <label class="form-label form-label--decoration" for="company">
+                  <h2>1. Огранізація.</h2>
                   <input
                     class="form-label__input"
                     type="text"
@@ -36,8 +37,8 @@
                     id="company"
                   />
                 </label>
-                <label class="form-label" for="name">
-                  <span class="form-label__text">2. Ваше ім'я</span>
+                <label class="form-label form-label--decoration" for="name">
+                  <h2>2. Ваше ім'я.</h2>
                   <input
                     class="form-label__input"
                     type="text"
@@ -46,8 +47,8 @@
                     id="name"
                   />
                 </label>
-                <label class="form-label" for="position">
-                  <span class="form-label__text">3. Посада</span>
+                <label class="form-label form-label--decoration" for="position">
+                  <h2>3. Посада.</h2>
                   <input
                     class="form-label__input"
                     type="text"
@@ -56,8 +57,8 @@
                     id="position"
                   />
                 </label>
-                <label class="form-label" for="address">
-                  <span class="form-label__text">4. Адреса</span>
+                <label class="form-label form-label--decoration" for="address">
+                  <h2>4. Адреса.</h2>
                   <input
                     class="form-label__input"
                     type="text"
@@ -66,8 +67,8 @@
                     id="address"
                   />
                 </label>
-                <label class="form-label" for="phone">
-                  <span class="form-label__text">5. Телефон</span>
+                <label class="form-label form-label--decoration" for="phone">
+                  <h2>5. Телефон.</h2>
                   <input
                     class="form-label__input form-label__input-tel"
                     type="tel"
@@ -76,8 +77,8 @@
                     id="phone"
                   />
                 </label>
-                <label class="form-label" for="email">
-                  <span class="form-label__text">6. Електрона пошта</span>
+                <label class="form-label form-label--decoration" for="email">
+                  <h2>6. Електрона пошта.</h2>
                   <input
                     class="form-label__input"
                     type="email"
@@ -93,18 +94,77 @@
               <form class="formTwo visually-hidden" autocomplete="on">
                 <div class="form__equipment">
                   <h2>7. Виберіть необхідний тип обладнання.</h2>
-                  <label class="form-next-label">
-                    <input type="checkbox" name="cylinder" />
-                    <span class="form-label__text">Кріоциліндр</span>
-                  </label>
-                  <label class="form-next-label">
-                    <input type="checkbox" name="capacity" />
-                    <span class="form-label__text">Ємність для зберігання</span>
-                  </label>
-                  <label class="form-next-label">
-                    <input type="checkbox" name="gasifier" />
-                    <span class="form-label__text">Газифікатор</span>
-                  </label>
+
+                  <div class="cylinder">
+                    <label class="form-next-label">
+                      <input class="cylinder" type="checkbox" name="cylinder" />
+                      <span class="form-label__text">Кріоциліндр</span>
+                    </label>
+                    <div class="form-modal-hover-cylinder">
+                      <img
+                        class="form-modal-hover__photo"
+                        src="./images/kriocelinder.png"
+                        alt="випарник атмосферний"
+                        loading="lazy"
+                      />
+                      <p class="form-modal-hover__text">
+                        Кріоциліндри представляють собою кріогенну посудину для
+                        зберігання, транспортування та газифікації рідкого
+                        кисню, азоту, аргону, двоокису вуглецю. За допомогою
+                        вбудованого випарника скраплений газ перетворюється в
+                        газоподібний стан за допомогою теплообміну з внутрішньою
+                        стінкою зовнішнього судини.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="capacity">
+                    <label class="form-next-label">
+                      <input type="checkbox" name="capacity" />
+                      <span class="form-label__text"
+                        >Ємність для зберігання</span
+                      >
+                    </label>
+                    <div class="form-modal-hover-capacity">
+                      <img
+                        class="form-modal-hover__photo"
+                        src="./images/rampa.png"
+                        alt="випарник атмосферний"
+                        loading="lazy"
+                      />
+                      <p class="form-modal-hover__text">
+                        Рампа киснева - колектор високого тиску, за допомогою
+                        якого підключається необхідну кількість до лінії
+                        споживання газових балонів, сполучних трубок,
+                        регуляторів тиску, вентилів, запобіжних клапанів,
+                        манометрів та ін. Рампа киснева призначена для
+                        безперебійної подачі кисню кінцевого споживача,
+                        застосовуються в медичних установах.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="gasifier">
+                    <label class="form-next-label">
+                      <input type="checkbox" name="gasifier" />
+                      <span class="form-label__text">Газифікатор</span>
+                    </label>
+                    <div class="form-modal-hover-gasifier">
+                      <img
+                        class="form-modal-hover__photo"
+                        src="./images/gazyficator.png"
+                        alt="випарник атмосферний"
+                        loading="lazy"
+                      />
+                      <p class="form-modal-hover__text">
+                        Застосування визначається газифікацією та зберіганням
+                        рідкого кисню, азоту, аргону, а також рідкого двоокису
+                        вуглецю. Кріогенні газифікатори автоматично забезпечують
+                        підтримання необхідного тиску судини шляхом
+                        контрольованого випарювання рідини.
+                      </p>
+                    </div>
+                  </div>
                   <label class="form-next-label">
                     <span class="form-label__text">Ішне</span>
                     <input
