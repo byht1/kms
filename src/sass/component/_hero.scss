@@ -1,22 +1,50 @@
 @import '../../node_modules/swiper/swiper-bundle.min.css';
 
-.hero-list__text {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
+.swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
 
-  color: #fff;
+  @include desktop {
+    width: 15px;
+    height: 15px;
+  }
+  @include desktop {
+    width: 20px;
+    height: 20px;
+  }
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @media screen and(max-width: 767.9px) {
+    font-size: 20px;
+  }
 }
 
-.swiper .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  font-size: 14px;
-  background-color: #fff;
+.swiper-button-next {
+  right: 0;
+  left: auto;
+  @include desktop {
+    right: 5px;
+    left: auto;
+  }
+  @include desktop {
+    right: 10px;
+    left: auto;
+  }
+}
+.swiper-button-prev {
+  right: auto;
+  left: 0;
+
+  @include desktop {
+    right: auto;
+    left: 5px;
+  }
+  @include desktop {
+    right: auto;
+    left: 10px;
+  }
 }
 
 .swiper {

@@ -48,16 +48,6 @@
   }
 }
 
-// @media screen and (min-width: 480px) {
-//   .benefist-box {
-//     display: flex;
-//     justify-content: center;
-//   }
-//   .content__element {
-//     width: 450px;
-//   }
-// }
-
 @media screen and (max-width: 767px) {
   .content {
     &__element:not(:first-child) {
@@ -80,7 +70,7 @@
   .content {
     flex-wrap: wrap;
     &__element {
-      width: 354px;
+      flex-basis: calc(100% / 2 - 30px);
 
       &:nth-child(2n) {
         margin-left: 30px;

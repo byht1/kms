@@ -1,14 +1,23 @@
 .box-offer {
-  padding: 20px 0;
+  padding: 30px 0;
 }
 
 .list-offer {
   margin-top: 30px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 30px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  // justify-content: space-between;
+  // align-items: center;
+  // flex-wrap: wrap;
+  // gap: 30px;
 }
 
 .list-offer__elements {
@@ -19,7 +28,7 @@
 }
 
 .list-offer__photo {
-  height: 350px;
+  max-height: 350px;
   object-fit: cover;
   object-position: left bottom;
 }
@@ -31,24 +40,34 @@
   text-transform: uppercase;
   color: #fff;
   background-color: #2f303aa6;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  font-family: Roboto;
-  font-size: 14px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: 'Roboto';
+  font-size: 12px;
   font-style: normal;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 1.14;
   position: absolute;
   bottom: 0;
   left: 0;
+
+  @include tablet {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    font-size: 14px;
+  }
 }
 
 .offer__header {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
+  font-size: 24px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+
+  @include tablet {
+    font-size: 36px;
+  }
 }
