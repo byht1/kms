@@ -1,0 +1,23 @@
+main {
+  padding-top: 80px;
+  height: calc(100vh - 295px);
+}
+
+.fail-list {
+  margin-top: 20px;
+}
+
+.fail-list__elements {
+  &:last-child {
+    margin-top: 20px;
+  }
+}
+
+form {
+  margin-top: 20px;
+}
+
+.fail {
+  display: block;
+  margin: 0 auto;
+}

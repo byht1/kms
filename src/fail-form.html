@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KMS</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./sass/fail-form.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@100;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <include src="./partials/page1/headerTwo.html"></include>
+
+    <main>
+        <section>
+            <div class="container">
+                <ul class="fail-list">
+                <li class="fail-list__elements"><a href="./download/mellSheet.docx" download=>Скачати фаил в форматі .DOCK</a></li>
+                <li class="fail-list__elements"><a href="./download//mellSheet.pdf" download=>Скачати фаил в форматі .PDF</a></li>
+            </ul>
+            
+
+            <form action="on">
+                <input type="file" class="fail">
+                <button class="button" type="submit">Відправити</button>
+            </form>
+            </div>
+        </section>
+    </main>
+
+    <include src="./partials/page1/footer.html"></include>
+
+    <script src="./js/menu.js" type="module"></script>
+  </body>
+</html>

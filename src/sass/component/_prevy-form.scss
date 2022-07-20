@@ -1,0 +1,19 @@
+main {
+  padding-top: 80px;
+  height: calc(100vh - 295px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-form-button {
+  & .button {
+    max-width: inherit;
+    text-align: center;
+
+    & span {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
