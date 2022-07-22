@@ -95,7 +95,7 @@ function calc() {
   data.c210 = Math.ceil(Number(costs) / (210 * 0.76)).toString();
   data.c500 = Math.ceil(Number(costs) / (500 * 0.76)).toString();
   data.liquid = (Number(costs) / 751.8).toFixed(2);
-  data.diameter = (18.8 * Math.sqrt((oneT * tottalPoint) / 10)).toFixed(2);
+  data.diameter = (18.8 * Math.sqrt((oneT * tottalPoint) / spid)).toFixed(2);
 }
 
 function tableText() {
