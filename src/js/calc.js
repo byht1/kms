@@ -96,14 +96,6 @@ function calc() {
   data.c500 = Math.ceil(Number(costs) / (500 * 0.76)).toString();
   data.liquid = (Number(costs) / 751.8).toFixed(2);
   data.diameter = (18.8 * Math.sqrt((oneT * tottalPoint) / 10)).toFixed(2);
-
-  console.log('🚀 ~ data.costs', data.costs);
-  console.log('🚀 ~ data.ballons', data.ballons);
-  console.log('🚀 ~ data.c175', data.c175);
-  console.log('🚀 ~ data.c210', data.c210);
-  console.log('🚀 ~ data.c500', data.c500);
-  console.log('🚀 ~ data.liquid', data.liquid);
-  console.log('🚀 ~ data.diameter', data.diameter);
 }
 
 function tableText() {
