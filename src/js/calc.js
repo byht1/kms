@@ -8,10 +8,23 @@ const refs = {
   c210: document.querySelector('.c210'),
   c500: document.querySelector('.c500'),
   liquid: document.querySelector('.liquid'),
+  liquid5: document.querySelector('.liquid5'),
+  liquid5Box: document.querySelector('#liquid-dox'),
   diameter: document.querySelector('.diameter'),
 };
-const { form, reset, costs, ballons, c175, c210, c500, liquid, diameter } =
-  refs;
+const {
+  form,
+  reset,
+  costs,
+  ballons,
+  c175,
+  c210,
+  c500,
+  liquid,
+  liquid5,
+  liquid5Box,
+  diameter,
+} = refs;
 
 const data = {
   // Витрати
@@ -26,6 +39,7 @@ const data = {
   c210: null,
   c500: null,
   liquid: null,
+  liquid5: null,
   diameter: null,
 };
 
@@ -46,6 +60,7 @@ function submit() {
   dataКecording(volume.name, volume.value);
   dataКecording(cof.name, cof.value);
   calc();
+  liquid5Box.classList.remove('visually-hidden');
   tableText();
 }
 
@@ -95,6 +110,7 @@ function calc() {
   data.c210 = Math.ceil(Number(costs) / (210 * 0.76)).toString();
   data.c500 = Math.ceil(Number(costs) / (500 * 0.76)).toString();
   data.liquid = (Number(costs) / 751.8).toFixed(2);
+  data.liquid5 = ((Number(costs) / 751.8) * 5).toFixed(2);
   data.diameter = (18.8 * Math.sqrt((oneT * tottalPoint) / spid)).toFixed(2);
 }
 
@@ -105,6 +121,7 @@ function tableText() {
   c210.textContent = `${data.c210}`;
   c500.textContent = `${data.c500}`;
   liquid.textContent = `${data.liquid}`;
+  liquid5.textContent = `${data.liquid5}`;
   diameter.textContent = `${data.diameter}`;
 }
 
@@ -115,5 +132,7 @@ function tableTextReset() {
   c210.textContent = '';
   c500.textContent = '';
   liquid.textContent = '';
+  liquid5.textContent = '';
   diameter.textContent = '';
+  liquid5Box.classList.add('visually-hidden');
 }
