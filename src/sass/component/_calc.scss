@@ -42,13 +42,25 @@ main {
   width: 100%;
   padding: 15px;
   background-color: #182431;
+
+  @include tablet {
+  }
 }
 
 .form-box-calc {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
 }
 
 .form__label {
@@ -57,6 +69,16 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media screen and (max-width: 767.9px) {
+    &:not(:first-child) {
+      margin-top: 15px;
+    }
+  }
+
+  @include tablet {
+    margin: 0;
+  }
 }
 
 .form__label-box {
@@ -65,10 +87,6 @@ main {
   align-items: center;
   gap: 10px;
   padding: 0 10px;
-}
-
-.form__label-box--decorstion {
-  // margin: 0;
 }
 
 .form__label-input {
@@ -96,9 +114,11 @@ main {
 }
 
 .form__list-button {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
 }
 
 .text-calc.footnote {
@@ -109,6 +129,7 @@ main {
 
 .footnote--decoration {
   font-weight: 900;
+  color: red;
 }
 
 .table {
@@ -146,4 +167,15 @@ main {
 
 .calc .button {
   max-width: inherit;
+}
+
+.table-one {
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+}
+.table-two {
+  @media screen and (min-width: 500px) {
+    display: none;
+  }
 }

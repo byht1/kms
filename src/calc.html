@@ -15,192 +15,271 @@
     />
   </head>
   <body>
-    <include src="./partials/page1/headerTwo.html"></include>
+    <div style="overflow: hidden">
+      <include src="./partials/page1/headerTwo.html"></include>
 
-    <main>
-      <section class="calc">
-        <div class="container">
-          <h1 class="title-calc">Калькулятор витрат газу</h1>
-          <h2 class="title-calc-two">Медичне газопостачання</h2>
-          <p class="text-calc">
-            Централізована система киснепостачання складається з основного
-            джерела типу: (ємність для зберігання, газифікатор, кріоциліндр,
-            киснева станція, тощо), магістральної мережі, внутрішньо-будинкового
-            розведення системи киснепостачання, місць приєднання та споживання
-            кисню медичного газоподібного.
-          </p>
-          <form autocomplete="off" id="form">
-            <div class="form-box-calc">
-              <label class="form__label">
-                <span class="form__label-text"
-                  >Існуючих місць споживання киисню</span
-                >
-                <div class="form__label-box">
-                  <input
-                    class="form__label-input"
-                    name="existing"
-                    type="number"
-                    required
-                  />
-                  <span class="form__label-text">шт.</span>
-                </div>
-              </label>
+      <main>
+        <section class="calc">
+          <div class="container">
+            <h1 class="title-calc">Калькулятор витрат газу</h1>
+            <h2 class="title-calc-two">Медичне газопостачання</h2>
+            <p class="text-calc">
+              Централізована система киснепостачання складається з основного
+              джерела типу: (ємність для зберігання, газифікатор, кріоциліндр,
+              киснева станція, тощо), магістральної мережі,
+              внутрішньо-будинкового розведення системи киснепостачання, місць
+              приєднання та споживання кисню медичного газоподібного.
+            </p>
+            <form autocomplete="off" id="form">
+              <div class="form-box-calc">
+                <label class="form__label">
+                  <span class="form__label-text"
+                    >Існуючих місць споживання киисню</span
+                  >
+                  <div class="form__label-box">
+                    <input
+                      class="form__label-input"
+                      name="existing"
+                      type="number"
+                      required
+                    />
+                    <span class="form__label-text">шт.</span>
+                  </div>
+                </label>
 
-              <label class="form__label">
-                <span class="form__label-text"
-                  >Проектних/перспективних місць споживання кисню</span
-                >
-                <div class="form__label-box">
-                  <input
-                    class="form__label-input"
-                    name="design"
-                    type="number"
-                  />
-                  <span class="form__label-text">шт.</span>
-                </div>
-              </label>
+                <label class="form__label">
+                  <span class="form__label-text"
+                    >Проектних/перспективних місць споживання кисню</span
+                  >
+                  <div class="form__label-box">
+                    <input
+                      class="form__label-input"
+                      name="design"
+                      type="number"
+                    />
+                    <span class="form__label-text">шт.</span>
+                  </div>
+                </label>
 
-              <label class="form__label">
-                <span class="form__label-text"
-                  >Апаратів ШВЛ (сума існуючих/перспективних)</span
-                >
-                <div class="form__label-box">
-                  <input
-                    class="form__label-input"
-                    name="devicesSvl"
-                    type="number"
-                  />
-                  <span class="form__label-text">шт.</span>
-                </div>
-              </label>
+                <label class="form__label">
+                  <span class="form__label-text"
+                    >Апаратів ШВЛ (сума існуючих/перспективних)</span
+                  >
+                  <div class="form__label-box">
+                    <input
+                      class="form__label-input"
+                      name="devicesSvl"
+                      type="number"
+                    />
+                    <span class="form__label-text">шт.</span>
+                  </div>
+                </label>
 
-              <label class="form__label">
-                <span class="form__label-text"
-                  >Навантаження системи киснепостачання</span
-                >
-                <div class="form__label-box form__label-box--decorstion">
-                  <select class="form__label-input" name="volume">
-                    <option value="12">12</option>
-                    <option value="9">9</option>
-                    <option value="6">6</option>
-                  </select>
-                  <span class="form__label-text">м<sup>3</sup>\год</span>
-                </div>
-              </label>
+                <label class="form__label">
+                  <span class="form__label-text"
+                    >Навантаження системи киснепостачання</span
+                  >
+                  <div class="form__label-box form__label-box--decorstion">
+                    <select class="form__label-input" name="volume">
+                      <option value="12">12</option>
+                      <option value="9">9</option>
+                      <option value="6">6</option>
+                    </select>
+                    <span class="form__label-text">м<sup>3</sup>\год</span>
+                  </div>
+                </label>
 
-              <label class="form__label">
-                <span class="form__label-text">Коефіцієнт одночасності*</span>
-                <div class="form__label-box">
-                  <input
-                    class="form__label-input"
-                    name="cof"
-                    type="number"
-                    max="1"
-                  />
-                </div>
-              </label>
+                <label class="form__label">
+                  <span class="form__label-text"
+                    >Коефіцієнт одночасності<span class="footnote--decoration"
+                      >*</span
+                    ></span
+                  >
+                  <div class="form__label-box">
+                    <input class="form__label-input" name="cof" />
+                  </div>
+                </label>
+              </div>
+
+              <ul class="form__list-button">
+                <li>
+                  <button class="button reset" type="button">Скинути</button>
+                </li>
+                <li>
+                  <button class="button" type="submit">Розрахувати</button>
+                </li>
+              </ul>
+            </form>
+
+            <p class="text-calc footnote">
+              <span class="footnote--decoration">*</span> Якщо на даний час
+              пандемія,то введіть число 1,коли ні- залиште це поле пустим. На
+              випадок того,якщо ви поставите неправильний коефіцієнт,програма
+              автоматичного замінить його
+            </p>
+
+            <div>
+              <h2 class="title-calc-two">Результати розрахунків</h2>
+
+              <table class="table table-one">
+                <tr>
+                  <th>Назва поля</th>
+                  <th>Результат рохрахунку</th>
+                  <th>Одиниці вимірювання</th>
+                </tr>
+                <tr>
+                  <td>Орієнтовні витрати газу</td>
+                  <td class="table__text table__text--decotation">
+                    <span class="costs"></span>
+                  </td>
+                  <td class="table__text">м<sup>3</sup>/год</td>
+                </tr>
+                <tr>
+                  <td>В балонах об'ємом 40л</td>
+                  <td class="table__text table__text--decotation">
+                    <span class="ballons"></span>
+                  </td>
+                  <td class="table__text">шт/добу</td>
+                </tr>
+                <tr>
+                  <td>В кріоциліндрах</td>
+                </tr>
+                <tr>
+                  <td>175 л</td>
+                  <td class="table__text table__text--decotation">
+                    <span class="c175"></span>
+                  </td>
+                  <td class="table__text">шт/добу</td>
+                </tr>
+                <tr>
+                  <td>210 л</td>
+                  <td class="table__text table__text--decotation">
+                    <span class="c210"></span>
+                  </td>
+                  <td class="table__text">шт/добу</td>
+                </tr>
+                <tr>
+                  <td>500 л</td>
+                  <td class="table__text table__text--decotation">
+                    <span class="c500"></span>
+                  </td>
+                  <td class="table__text">шт/добу</td>
+                </tr>
+                <tr>
+                  <td>В зрідженому вигляді (газифікаторі)*</td>
+                  <td class="table__text table__text--decotation">
+                    <span class="liquid"></span>
+                  </td>
+                  <td class="table__text">т/добу</td>
+                </tr>
+                <tr>
+                  <td>
+                    Розріхунковий діаметер магістрального трубопроводу повинен
+                    становити (не менше)
+                  </td>
+                  <td class="table__text table__text--decotation">
+                    <span class="diameter"></span>
+                  </td>
+                  <td class="table__text">мм</td>
+                </tr>
+              </table>
+
+              <table class="table table-two">
+                <tbody>
+                  <tr>
+                    <th colspan="2">Результат рохрахунку</th>
+                    <th>Одиниці вимірювання</th>
+                  </tr>
+                  <tr>
+                    <td colspan="3">Орієнтовні витрати газу</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="table__text table__text--decotation">
+                      <span class="costs-two"></span>
+                    </td>
+                    <td>м<sup>3</sup>/год</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">В балонах об'ємом 40л</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="table__text table__text--decotation">
+                      <span class="ballons-two"></span>
+                    </td>
+                    <td>шт/добу</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">В кріоциліндрах</td>
+                  </tr>
+                  <tr>
+                    <td>175л</td>
+                    <td class="table__text table__text--decotation">
+                      <span class="c175-two"></span>
+                    </td>
+                    <td>шт/добу</td>
+                  </tr>
+                  <tr>
+                    <td>210л</td>
+                    <td class="table__text table__text--decotation">
+                      <span class="c210-two"></span>
+                    </td>
+                    <td>шт/добу</td>
+                  </tr>
+                  <tr>
+                    <td>500л</td>
+                    <td class="table__text table__text--decotation">
+                      <span class="c500-two"></span>
+                    </td>
+                    <td>шт/добу</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">В зрідженому вигляді (газифікаторі)*</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="table__text table__text--decotation">
+                      <span class="liquid-two"></span>
+                    </td>
+                    <td>т/добу</td>
+                  </tr>
+                  <tr>
+                    <td colspan="3">
+                      Розріхунковий діаметер магістрального трубопроводу повинен
+                      становити (не менше)
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2" class="table__text table__text--decotation">
+                      <span class="diameter-two"></span>
+                    </td>
+                    <td>мм</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-
-            <ul class="form__list-button">
-              <li>
-                <button class="button reset" type="button">Скинути</button>
-              </li>
-              <li><button class="button" type="submit">Розрахувати</button></li>
-            </ul>
-          </form>
-
-          <p class="text-calc footnote">
-            <span class="footnote--decoration">*</span> якщо зараз пандемія,
-            введіть число 1, якщо ні - залиште це поле пустим
-          </p>
-
-          <div>
-            <h2 class="title-calc-two">Результати розрахунків</h2>
-
-            <table class="table">
-              <tr>
-                <th>Назва поля</th>
-                <th>Результат рохрахунку</th>
-                <th>Одиниці вимірювання</th>
-              </tr>
-              <tr>
-                <td>Орієнтовні витрати газу</td>
-                <td class="table__text table__text--decotation">
-                  <span class="costs"></span>
-                </td>
-                <td class="table__text">м<sup>3</sup>/год</td>
-              </tr>
-              <tr>
-                <td>В балонах об'ємом 40л</td>
-                <td class="table__text table__text--decotation">
-                  <span class="ballons"></span>
-                </td>
-                <td class="table__text">шт/добу</td>
-              </tr>
-              <tr>
-                <td>В кріоциліндрах</td>
-              </tr>
-              <tr>
-                <td>175 л</td>
-                <td class="table__text table__text--decotation">
-                  <span class="c175"></span>
-                </td>
-                <td class="table__text">шт/добу</td>
-              </tr>
-              <tr>
-                <td>210 л</td>
-                <td class="table__text table__text--decotation">
-                  <span class="c210"></span>
-                </td>
-                <td class="table__text">шт/добу</td>
-              </tr>
-              <tr>
-                <td>500 л</td>
-                <td class="table__text table__text--decotation">
-                  <span class="c500"></span>
-                </td>
-                <td class="table__text">шт/добу</td>
-              </tr>
-              <tr>
-                <td>В зрідженому вигляді (газифікаторі)*</td>
-                <td class="table__text table__text--decotation">
-                  <span class="liquid"></span>
-                </td>
-                <td class="table__text">т/добу</td>
-              </tr>
-              <tr>
-                <td>
-                  Розріхунковий діаметер магістрального трубопроводу повинен
-                  становити (не менше)
-                </td>
-                <td class="table__text table__text--decotation">
-                  <span class="diameter"></span>
-                </td>
-                <td class="table__text">мм</td>
-              </tr>
-            </table>
+            <p class="text-calc footnote">
+              <span class="footnote--decoration">*</span> Згідно ДБН основне
+              обладанання має забезпечувати мінімально 5 діб безперебійної
+              роботи
+              <span class="visually-hidden" id="liquid-dox"
+                >(згідно розрахунків - це <span class="liquid5"></span> т/добу
+                )</span
+              >
+            </p>
+            <p class="text-calc">
+              Підбір основного обладання має здійснювати кваліфікований
+              спеціаліст або дане обладняння має бути запроектовано проектною
+              організацією.
+            </p>
+            <button class="button" type="button" data-open-modal-two>
+              Необхідна консультація спеціаліста?
+            </button>
           </div>
-          <p class="text-calc footnote">
-            <span class="footnote--decoration">*</span> Згідно ДБН основне
-            обладанання має забезпечувати мінімально 5 діб безперебійної роботи
-            <span class="visually-hidden" id="liquid-dox"
-              >(згідно розрахунків - це
-              <span class="liquid5"></span> м<sup>3</sup>/добу )</span
-            >
-          </p>
-          <p class="text-calc">
-            Підбір основного обладання має здійснювати кваліфікований спеціаліст
-            або дане обладняння має бути запроектовано проектною організацією.
-          </p>
-          <button class="button" type="button" data-open-modal-two>
-            Необхідна консультація спеціаліста?
-          </button>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
 
-    <include src="./partials/page1/footer.html"></include>
-    <include src="./partials/form.html"></include>
+      <include src="./partials/page1/footer.html"></include>
+      <include src="./partials/form.html"></include>
+    </div>
 
     <script src="./js/menu.js" type="module"></script>
     <script src="./js/modal.js" type="module"></script>

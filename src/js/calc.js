@@ -11,6 +11,16 @@ const refs = {
   liquid5: document.querySelector('.liquid5'),
   liquid5Box: document.querySelector('#liquid-dox'),
   diameter: document.querySelector('.diameter'),
+  // mobail
+  costsTwo: document.querySelector('.costs-two'),
+  ballonsTwo: document.querySelector('.ballons-two'),
+  c175Two: document.querySelector('.c175-two'),
+  c210Two: document.querySelector('.c210-two'),
+  c500Two: document.querySelector('.c500-two'),
+  liquidTwo: document.querySelector('.liquid-two'),
+  liquid5Two: document.querySelector('.liquid5-two'),
+  liquid5BoxTwo: document.querySelector('#liquid-dox-two'),
+  diameterTwo: document.querySelector('.diameter-two'),
 };
 const {
   form,
@@ -24,6 +34,15 @@ const {
   liquid5,
   liquid5Box,
   diameter,
+  costsTwo,
+  ballonsTwo,
+  c175Two,
+  c210Two,
+  c500Two,
+  liquidTwo,
+  liquid5Two,
+  liquid5BoxTwo,
+  diameterTwo,
 } = refs;
 
 const data = {
@@ -33,6 +52,8 @@ const data = {
   // 210л
   // 500л
   // Рідкий кисень
+  // Рідкий кисень на 5 днів
+  // Діаметер труби
   costs: null,
   ballons: null,
   c175: null,
@@ -69,6 +90,15 @@ function dataКecording(name, value) {
     calcCof();
     return;
   }
+
+  if (name === 'cof' && value > 1) {
+    value = 1;
+  }
+
+  if (name === 'cof' && value < 0.7) {
+    value = 0.7;
+  }
+  console.log('🚀 ~ value', value);
   data[name] = Number(value);
 }
 
@@ -105,10 +135,10 @@ function calc() {
   const spid = 10;
   const costs = (tottalPoint * volume * cof * 0.06 * 24).toFixed(2);
   data.costs = costs;
-  data.ballons = Math.ceil(Number(costs) / 6.36).toString();
-  data.c175 = Math.ceil(Number(costs) / (175 * 0.76)).toString();
-  data.c210 = Math.ceil(Number(costs) / (210 * 0.76)).toString();
-  data.c500 = Math.ceil(Number(costs) / (500 * 0.76)).toString();
+  data.ballons = (Number(costs) / 6.36).toFixed(2);
+  data.c175 = (Number(costs) / (175 * 0.76)).toFixed(2);
+  data.c210 = (Number(costs) / (210 * 0.76)).toFixed(2);
+  data.c500 = (Number(costs) / (500 * 0.76)).toFixed(2);
   data.liquid = (Number(costs) / 751.8).toFixed(2);
   data.liquid5 = ((Number(costs) / 751.8) * 5).toFixed(2);
   data.diameter = (18.8 * Math.sqrt((oneT * tottalPoint) / spid)).toFixed(2);
@@ -123,6 +153,14 @@ function tableText() {
   liquid.textContent = `${data.liquid}`;
   liquid5.textContent = `${data.liquid5}`;
   diameter.textContent = `${data.diameter}`;
+
+  costsTwo.textContent = `${data.costs}`;
+  ballonsTwo.textContent = `${data.ballons}`;
+  c175Two.textContent = `${data.c175}`;
+  c210Two.textContent = `${data.c210}`;
+  c500Two.textContent = `${data.c500}`;
+  liquidTwo.textContent = `${data.liquid}`;
+  diameterTwo.textContent = `${data.diameter}`;
 }
 
 function tableTextReset() {
@@ -134,5 +172,14 @@ function tableTextReset() {
   liquid.textContent = '';
   liquid5.textContent = '';
   diameter.textContent = '';
+
+  costsTwo.textContent = '';
+  ballonsTwo.textContent = '';
+  c175Two.textContent = '';
+  c210Two.textContent = '';
+  c500Two.textContent = '';
+  liquidTwo.textContent = '';
+  liquid5Two.textContent = '';
+  diameterTwo.textContent = '';
   liquid5Box.classList.add('visually-hidden');
 }
